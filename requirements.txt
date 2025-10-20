@@ -1,6 +1,6 @@
 ﻿annotated-types==0.7.0
 anyio==4.6.2
-astroid==3.3.9
+astroid==3.2.4
 attrs==25.3.0
 autopep8==2.3.2
 backoff==2.2.1
@@ -148,4 +148,5 @@ wsproto==1.2.0
 xgboost==3.0.5
 zipp==3.23.0
 zstandard==0.24.0
+
 
