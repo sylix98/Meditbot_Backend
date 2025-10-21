@@ -128,6 +128,8 @@ def get_modal_info(dept_keywords=None, doctor_keyword=None):
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--disable-gpu")
 
         # 使用 WebDriver Manager 確保驅動程式版本正確
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
@@ -278,4 +280,5 @@ if __name__ == "__main__":
     print("背景爬蟲排程已啟動，將每分鐘更新一次看診進度...", flush=True)
     while True:
         schedule.run_pending()
+
         time.sleep(1)
