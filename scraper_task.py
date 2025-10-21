@@ -19,7 +19,7 @@ from typing import List, Dict, Any
 
 # --- 設置與錯誤修正 ---
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-CLINIC_STATUS_FILE = "clinic_status.json" # 最終 JSON 檔案名稱
+CLINIC_STATUS_FILE = "./data/clinic_status.json" # 最終 JSON 檔案名稱
 
 # 【移除】所有關於 SQLite DB 的設置和操作函數 (setup_db, log_snapshot, calculate_dynamic_features)
 # --------------------------------------------------------
@@ -287,5 +287,6 @@ if __name__ == "__main__":
         schedule.run_pending()
 
         time.sleep(1)
+
 
 
