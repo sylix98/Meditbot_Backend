@@ -137,7 +137,7 @@ def get_modal_info(dept_keywords=None, doctor_keyword=None):
         chrome_options.add_argument(f'user-agent={user_agent}')
         
         # 使用 WebDriver Manager 確保驅動程式版本正確
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager(version="120.0.6099.109").install()), options=chrome_options)
         url = "https://www.kmugh.org.tw/Web/WebRegistration/OPDSeq/ProcessMain?lang=twtw"
         driver.get(url)
         time.sleep(3)
@@ -287,6 +287,7 @@ if __name__ == "__main__":
         schedule.run_pending()
 
         time.sleep(1)
+
 
 
 
